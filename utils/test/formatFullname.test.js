@@ -16,4 +16,9 @@ describe('formatFullname', () => {
     expect(formatFullname('Jon Doe Test')).to.equal('Error');
     expect(formatFullname('Jon')).to.equal('Error');
   });
+  it('should return the correct formatted fullName when provided with valid args', () => {
+    expect(formatFullname('jOhN DoE')).to.equal('John Doe');
+    expect(formatFullname('John Doe')).to.equal('John Doe');
+    expect(formatFullname('jOhN dOE')).to.equal('John Doe');
+  });
 });
